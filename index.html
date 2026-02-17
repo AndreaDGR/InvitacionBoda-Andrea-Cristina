@@ -22,7 +22,7 @@
 
         body {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            background: #f8f5f0;
+            background-image: url(/InvitacionBoda-Andrea-Cristina/img/paper-texture.jpg);
             color: #333;
             overflow-x: hidden;
         }
@@ -161,7 +161,7 @@
            CONTENIDO PRINCIPAL
         ======================================== */
         .main-content {
-            background-color: #fff6df;
+            /*background-color: #fff6df;*/
             opacity: 0;
             pointer-events: none;
             transition: opacity 1s ease;
@@ -254,7 +254,7 @@
         ANUNCIO DE BODA
         ======================================== */
         .announcement {
-            background-color: #fff6df;
+            /*background-color: #fff6df;
             /*background: linear-gradient(180deg, #f8f5f0 0%, #fff 50%, #f8f5f0 100%);*/
             padding: 30px 20px;
         }
@@ -287,25 +287,37 @@
             font-size: 1.8em;
             color: #666;
             margin: 20px 0;
+            padding: 10px;
             letter-spacing: 8px;
+            /*border: 2px solid rgb(90, 0, 0);
+            border-radius: 20px;*/
         }
 
         /* ========================================
            FRASE ROMÁNTICA
         ======================================== */
         .quote-section {
-            background: linear-gradient(rgba(45, 95, 79, 0.05), rgba(45, 95, 79, 0.02));
+            /*background: linear-gradient(rgba(45, 95, 79, 0.05), rgba(45, 95, 79, 0.02));*/
+            margin-left: 5px;
+            margin-bottom: 40px;
             padding: 60px 20px;
             font-style: italic;
             font-size: 1.4em;
             color: #555;
-            border-top: 2px solid #D4AF37;
-            border-bottom: 2px solid #D4AF37;
+            border: solid 2px rgb(90, 0, 0);
+            border-radius: 200px;
+            /*border-top: 2px solid #D4AF37;
+            border-bottom: 2px solid #D4AF37;*/
         }
 
         /* ========================================
            TARJETAS DE LUGAR
         ======================================== */
+
+        .fondo-tarjetas {
+            background-color: rgb(58, 6, 6);
+        }
+
         .place-card {
             max-width: 600px;
             margin: 40px auto;
@@ -330,10 +342,14 @@
 
         .place-title {
             font-size: 2em;
-            color: #2d5f4f;
+            color: rgb(90, 0, 0);
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 3px;
+        }
+
+        .imagen-finca {
+            width: 100%;
         }
 
         .place-icon {
@@ -341,7 +357,7 @@
             height: 60px;
             margin: 20px auto;
             /* Iconos decorativos */
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4AF37"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') center/contain no-repeat;
+            background: url(/InvitacionBoda-Andrea-Cristina/img/icono-localizacion.svg) center/contain no-repeat;
         }
 
         .place-name {
@@ -359,7 +375,7 @@
 
         .place-time {
             font-size: 1.3em;
-            color: #2d5f4f;
+            color: rgb(90, 0, 0);
             font-weight: bold;
             margin: 15px 0;
         }
@@ -367,15 +383,15 @@
         .map-link {
             display: inline-block;
             margin-top: 15px;
-            color: #2d5f4f;
+            color: rgb(90, 0, 0);
             text-decoration: none;
-            border-bottom: 2px solid #D4AF37;
+            /*border-bottom: 2px solid #D4AF37;*/
             padding-bottom: 5px;
             transition: all 0.3s ease;
         }
 
         .map-link:hover {
-            color: #D4AF37;
+            color: rgb(169, 1, 1);
             transform: translateY(-2px);
         }
 
@@ -391,13 +407,18 @@
             width: 100px;
             height: 100px;
             margin: 20px auto;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232d5f4f"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>') center/contain no-repeat;
+            background: url('/InvitacionBoda-Andrea-Cristina/img/icono-dresscode.jpg') center/contain no-repeat;
         }
 
         .dresscode h2 {
             font-size: 2.5em;
-            color: #2d5f4f;
+            color: rgb(90, 0, 0);
             margin: 20px 0;
+        }
+
+        #importante {
+            color: rgb(90, 0, 0);
+            font-weight: 600;
         }
 
         .dresscode p {
@@ -803,7 +824,7 @@
         </section>
 
         <!-- Ceremonia -->
-        <section>
+        <section class="fondo-tarjetas">
             <div class="place-card">
                 <div class="place-title">Ceremonia</div>
                 <img src="/InvitacionBoda-Andrea-Cristina/img/finca.webp" class="imagen-finca"
@@ -823,17 +844,20 @@
         </section>
 
         <!-- Celebración -->
-        <section style="background: #f8f5f0;">
+        <section class="fondo-tarjetas">
             <div class="place-card">
                 <div class="place-title">Celebración</div>
+                <img src="/InvitacionBoda-Andrea-Cristina/img/matilde.jpg" class="imagen-finca"
+                    alt="Finca la Casona de Oreja">
                 <div class="place-icon"></div>
-                <div class="place-name">Restaurante S'Olivaret</div>
+                <div class="place-name">Restaurante Matilde</div>
                 <div class="place-address">
-                    Carretera Alaró-Orient, Km 3<br>
-                    07340 Alaró
+                    Carretera de Madrid, 2<br>
+                    28300 Aranjuez
                 </div>
-                <div class="place-time">19:30 h</div>
-                <a href="https://maps.google.com/?q=Restaurante+S'Olivaret+Alaró" target="_blank" class="map-link">
+                <div class="place-time">14:00 h</div>
+                <a href="https://www.google.com/maps?sca_esv=6da2c71a879288c4&sxsrf=ANbL-n41G1mZ718Dk3tDSMmMegG8uaQxzw:1771349836997&fbs=ADc_l-bpk8W4E-qsVlOvbGJcDwpn60DczFdcvPnuv8WQohHLTaMb_WtLz8zQ41bNqiqMK_2tAHCL8fGF2xU6_n5bwc1VY0bTFxapawagsu8ZRhdzSi4OFT17NaCSyeOHE5ookutvs8zl-byLzzBa4KBcoEHz16Wgu5-MuRoatv63R0IE4qFZktjN2MQeeseWr7PY-shVWKCqJ1_0CQzqo5pcl1bf0V-1rw&biw=1943&bih=937&dpr=1.32&um=1&ie=UTF-8&fb=1&gl=es&sa=X&geocode=KT09Z9u8BUINMTx4JkfQHLLo&daddr=Carr.+de+Madrid,+2,+28300+Aranjuez,+Madrid"
+                    target="_blank" class="map-link">
                     📍 Ver en Maps
                 </a>
             </div>
@@ -844,7 +868,9 @@
             <h2>Dress Code</h2>
             <div class="dresscode-icon"></div>
             <p><strong>Formal</strong></p>
-            <p>El blanco está reservado para las novias,<br>¡nos encantará verte en otros colores!</p>
+            <p>El blanco está reservado para las novias,<br>¡nos encantará veros en otros colores!</p>
+            <p><span id="importante">Importante:</span> ¡Podéis traer bañador, hay piscina!</p>
+            <p></p>
         </section>
 
         <!-- Itinerario -->
