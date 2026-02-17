@@ -22,9 +22,18 @@
 
         body {
             font-family: 'Cormorant Garamond', 'Georgia', serif;
-            background-image: url(/InvitacionBoda-Andrea-Cristina/img/paper-texture.jpg);
+            background-image: url(/InvitacionBoda-Andrea-Cristina/img/fondo-manchas-vertical.jpg);
+            background-position: left;
             color: #333;
             overflow-x: hidden;
+        }
+
+        #music-btn {
+
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
         }
 
         /* -------- FUENTES ------- */
@@ -407,7 +416,7 @@
             width: 100px;
             height: 100px;
             margin: 20px auto;
-            background: url('/InvitacionBoda-Andrea-Cristina/img/icono-dresscode.jpg') center/contain no-repeat;
+            background: url('/InvitacionBoda-Andrea-Cristina/img/icono-dresscode.png') center/contain no-repeat;
         }
 
         .dresscode h2 {
@@ -774,6 +783,31 @@
 </head>
 
 <body>
+
+    <!-- ==========================================
+        AUDIO
+    =========================================== -->
+
+    <audio id="bg-music" autoplay loop muted>
+        <source src="img/thousand-years.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="toggleMusic()" id="music-btn">🔇 Activar música</button>
+
+    <script>
+        const audio = document.getElementById('bg-music');
+        const btn = document.getElementById('music-btn');
+
+        function toggleMusic() {
+            if (audio.muted) {
+                audio.muted = false;
+                btn.textContent = '🔊 Silenciar música';
+            } else {
+                audio.muted = true;
+                btn.textContent = '🔇 Activar música';
+            }
+        }
+    </script>
     <!-- ==========================================
          PANTALLA DE PORTADA
     =========================================== -->
