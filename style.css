@@ -265,7 +265,7 @@ section {
 
 .couple-tag {
     font-family: 'Prueba3';
-    font-size: 50px;
+    font-size: 3.7em;
     color: rgb(90, 0, 0);
     margin-bottom: 10px;
     letter-spacing: 3px;
@@ -306,11 +306,14 @@ section {
     margin-left: 5px;
     margin-bottom: 40px;
     padding: 60px 20px;
-    font-style: italic;
-    font-size: 1.4em;
+    font-family: "Prueba3";
+    font-size: 2.7em;
+    font-weight: 600;
     color: #555;
-    border: solid 2px rgb(90, 0, 0);
+    border: solid 3px rgb(90, 0, 0);
     border-radius: 200px;
+    box-shadow: inset 0 0 55px 2px rgba(90, 0, 0, 0.55);
+    background: linear-gradient(135deg, #f8f5f0, #fff);
     /*border-top: 2px solid #D4AF37;
             border-bottom: 2px solid #D4AF37;*/
 }
@@ -325,7 +328,6 @@ section {
 
 .place-card {
     max-width: 600px;
-    margin: 40px auto;
     background: white;
     border-radius: 20px;
     padding: 40px;
@@ -619,9 +621,10 @@ section {
            CONFIRMACIÓN DE ASISTENCIA
         ======================================== */
 .rsvp {
-    background: linear-gradient(135deg, #2d5f4f, #1a3d31);
+    background-color: rgb(58, 6, 6);
     color: white;
     padding: 100px 20px;
+    border-radius: 20px;
 }
 
 .rsvp h2 {
@@ -675,7 +678,7 @@ section {
         ======================================== */
 .gift {
     background: white;
-    padding: 80px 20px;
+    padding: 40px 20px;
 }
 
 .gift-icon {
@@ -693,7 +696,7 @@ section {
     letter-spacing: 2px;
     margin: 20px auto;
     max-width: 500px;
-    border: 2px dashed #D4AF37;
+    border: 2px dashed rgb(90, 0, 0);
 }
 
 /* ========================================
@@ -703,6 +706,7 @@ section {
     background: linear-gradient(135deg, #f8f5f0, #fff);
     padding: 60px 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .countdown h3 {
@@ -785,8 +789,10 @@ section {
 
 .floral-divider {
     text-align: center;
-    font-size: 2em;
-    color: #D4AF37;
+    font-family: 'Prueba3';
+    font-size: 5em;
+    font-weight: 600;
+    color: rgb(90, 0, 0);
     margin: 40px 0;
 }
 
