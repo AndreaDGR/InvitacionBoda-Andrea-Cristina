@@ -9,8 +9,8 @@
 
 body {
     font-family: 'Cormorant Garamond', 'Georgia', serif;
-    background-image: url(/InvitacionBoda-Andrea-Cristina/img/fondo-manchas-vertical.jpg);
-    background-position: left;
+    background-image: url(/InvitacionBoda-Andrea-Cristina/img/red-wine-stains-fabric.jpg);
+    background-position: center;
     color: #333;
     overflow-x: hidden;
 }
@@ -203,6 +203,8 @@ section {
     overflow: hidden;
     padding: 0;
     height: 70vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .hero-bg {
@@ -213,7 +215,7 @@ section {
     height: 85vh;
     /* 🔄 LÍNEA 178: CAMBIA ESTA URL POR TU IMAGEN/VIDEO HERO */
     background:
-        url('/InvitacionBoda-Andrea-Cristina/img/caras-anillo.jpeg') center/contain no-repeat;
+        url('/InvitacionBoda-Andrea-Cristina/img/caras-anillo.jpeg') center/cover no-repeat;
     animation: heroIntro 10s ease-out forwards,
         zoomBg 30s ease-in-out infinite;
     opacity: 0;
@@ -263,10 +265,11 @@ section {
 
 .couple-tag {
     font-family: 'Prueba3';
-    font-size: 3em;
+    font-size: 4em;
     color: rgb(90, 0, 0);
     margin-bottom: 10px;
     letter-spacing: 3px;
+    font-weight: 600;
 }
 
 .rings-gif {
@@ -511,7 +514,11 @@ section {
     padding: 80px 20px;
 }
 
-.gallery h2 {
+.gallery h2,
+.gallery1 h2,
+.gallery2 h2,
+.gallery3 h2,
+.gallery4 h2 {
     font-size: 2.5em;
     color: rgb(90, 0, 0);
     margin-bottom: 50px;
@@ -534,11 +541,28 @@ section {
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
+.gallery2-item, 
+.gallery3-item,
+.gallery4-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item:hover,
+.gallery2-item:hover,
+.gallery3-item:hover,
+.gallery4-item:hover {
     transform: scale(1.05);
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery2-item img,
+.gallery3-item img,
+.gallery4-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -546,15 +570,49 @@ section {
 
 /* 🔄 LÍNEAS 442-444: CAMBIA ESTAS URLs POR TUS FOTOS DE PAREJA */
 .gallery-item:nth-child(1) {
-    background: url('/InvitacionBoda-Andrea-Cristina/img/coliseo-caras.jpeg') center/cover;
+    background: url('/InvitacionBoda-Andrea-Cristina/img/IMG_0237.JPG') center/cover;
 }
 
 .gallery-item:nth-child(2) {
-    background: url('/InvitacionBoda-Andrea-Cristina/img/bautizo-jara.jpeg') top/cover;
+    background: url('/InvitacionBoda-Andrea-Cristina/img/20151006_125457374_iOS.jpg') center/cover;
 }
 
-.gallery-item:nth-child(3) {
+/*GALLERY 2*/
+
+.gallery2-item:nth-child(1) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/2016-01-30\ 10.02.11.jpg') center/cover;
+}
+
+.gallery2-item:nth-child(2) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/IMG_3023.JPG') center/cover;
+}
+
+.gallery2-item:nth-child(3) {
     background: url('/InvitacionBoda-Andrea-Cristina/img/risas-blanco-negro.jpeg') center/cover;
+}
+
+/* gallery 3*/
+
+.gallery3-item:nth-child(1) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/IMG_0878.JPG') center/cover;
+}
+
+.gallery3-item:nth-child(2) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/coliseo-caras.jpeg') center/cover;
+}
+
+/* gallery 4*/
+
+.gallery4-item:nth-child(1) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/beso-playa.jpeg') center/cover;
+}
+
+.gallery4-item:nth-child(2) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/WhatsApp\ Image\ 2026-02-24\ at\ 17.53.51.jpeg') center/cover;
+}
+
+.gallery4-item:nth-child(3) {
+    background: url('/InvitacionBoda-Andrea-Cristina/img/collage-fotos.jpeg') center/cover;
 }
 
 /* ========================================

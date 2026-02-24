@@ -44,7 +44,7 @@
          PANTALLA DE PORTADA
     =========================================== -->
 
-    <audio id="bg-music" loop>
+    <audio id="backgroundMusic" loop>
         <source src="/InvitacionBoda-Andrea-Cristina/img/thousand-years.mp3" type="audio/mpeg">
     </audio>
 
@@ -60,13 +60,6 @@
         </div>
     </div>
 
-    <script>
-        function entrar() {
-            document.getElementById('overlay').style.display = 'none';
-            document.getElementById('bg-music').play();
-        }
-    </script>
-
     <!-- ==========================================
          CONTENIDO PRINCIPAL
     =========================================== -->
@@ -75,8 +68,8 @@
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-bg"></div>
-            <video playsinline src="/InvitacionBoda-Andrea-Cristina/img/img-video-blend.mp4" muted=""
-                class="inset-0-olbrowsers absolute inset-0 h-full w-full object-cover mix-blend-screen contrast-200"></video>
+            <!--<video playsinline src="/InvitacionBoda-Andrea-Cristina/img/img-video-blend.mp4" muted=""
+                class="inset-0-olbrowsers absolute inset-0 h-full w-full object-cover mix-blend-screen contrast-200"></video>-->
 
 
             <!-- Si quieres video en lugar de imagen, descomenta esto:
@@ -94,7 +87,15 @@
             <div class="date">— 19·09·2026 —</div>
         </section>
 
-        <!-- Frase -->
+        <!-- Galería -->
+        <section class="gallery1">
+            <h2>El inicio de nuestro amor</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+            </div>
+        </section>
+        <!-- Frase --> 
         <section class="quote-section">
             <!--<div class="floral-divider">❀</div>-->
             <p>El amor es lo único que se multiplica cuando se comparte</p>
@@ -141,14 +142,33 @@
             </div>
         </section>
 
+        <!-- Galería -->
+        <section class="gallery2">
+            <h2>Los años seguían pasando…</h2>
+            <div class="gallery-grid">
+                <div class="gallery2-item"></div>
+                <div class="gallery2-item"></div>
+                <div class="gallery2-item"></div>
+            </div>
+        </section>
+
         <!-- Dress Code -->
         <section class="dresscode">
             <h2>Dress Code</h2>
             <div class="dresscode-icon"></div>
             <p><strong>Formal</strong></p>
             <p>El blanco está reservado para las novias,<br>¡nos encantará veros en otros colores!</p>
-            <p><span id="importante">Importante:</span> ¡Podéis traer bañador, hay piscina!</p>
+            <p><span id="importante">Importante:</span><br>¡Podéis traer bañador, hay piscina!</p>
             <p></p>
+        </section>
+
+        <!-- Galería -->
+        <section class="gallery3">
+            <h2>…pero no nos cansamos…</h2>
+            <div class="gallery-grid">
+                <div class="gallery3-item"></div>
+                <div class="gallery3-item"></div>
+            </div>
         </section>
 
         <!-- Itinerario -->
@@ -209,11 +229,11 @@
 
         <!-- Galería -->
         <section class="gallery">
-            <h2>Recuerdos de nuestro amor</h2>
+            <h2>…y por fin…<br>¡NOS CASAMOS!</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
-                <div class="gallery-item"></div>
+                <div class="gallery4-item"></div>
+                <div class="gallery4-item"></div>
+                <div class="gallery4-item"></div>
             </div>
         </section>
 
@@ -310,11 +330,6 @@
         <span id="musicIcon">🔊</span>
     </div>-->
 
-    <!-- 🔄 LÍNEA 881: CAMBIA ESTA URL POR TU CANCIÓN MP3 -->
-    <audio id="backgroundMusic" autoplay loop preload="auto">
-        <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_5c3b3859f9.mp3" type="audio/mpeg">
-    </audio>
-
     <script>
         // ==========================================
         // ABRIR INVITACIÓN
@@ -328,41 +343,20 @@
             // Ocultar portada
             coverScreen.classList.add('hidden');
 
-            // Mostrar contenido
+            // Mostrar contenido y reproducir música
             setTimeout(() => {
                 mainContent.classList.add('visible');
-                musicControl.classList.add('visible');
+                // musicControl.classList.add('visible'); // lo tienes comentado, déjalo así
                 coverScreen.style.display = 'none';
 
-                // Reproducir música
                 backgroundMusic.play().catch(e => {
                     console.log('Reproducción automática bloqueada');
                 });
             }, 500);
 
-            // Scroll al inicio
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // ==========================================
-        // CONTROL DE MÚSICA
-        // ==========================================
-        let musicPlaying = false;
-        const musicControl = document.getElementById('musicControl');
-        const musicIcon = document.getElementById('musicIcon');
-        const backgroundMusic = document.getElementById('backgroundMusic');
-
-        musicControl.addEventListener('click', function () {
-            if (musicPlaying) {
-                backgroundMusic.pause();
-                musicIcon.textContent = '🔇';
-                musicPlaying = false;
-            } else {
-                backgroundMusic.play();
-                musicIcon.textContent = '🔊';
-                musicPlaying = true;
-            }
-        });
 
         // ==========================================
         // CONFIRMACIÓN DE ASISTENCIA
@@ -407,20 +401,6 @@
         backgroundMusic.volume = 0.3;
     </script>
 
-    <script>
-        function openInvitation() {
-            // Reproducir música
-            document.getElementById('bg-music').play();
-
-            // Ocultar el cover con animación
-            const cover = document.getElementById('coverScreen');
-            cover.style.transition = 'opacity 1s ease';
-            cover.style.opacity = '0';
-            setTimeout(() => {
-                cover.style.display = 'none';
-            }, 1000);
-        }
-    </script>
 </body>
 
 </html>
