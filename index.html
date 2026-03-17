@@ -338,6 +338,7 @@
                     Pero falta lo más importante: ¡que vengas tú!
                 </p>
                 <div class="rsvp-envelope"></div>
+                <p class="rsvp-message">Importante:<br>Hay que rellenar un formulario por cada asistente.</p>
 
                 <!--Opción Google Forms -->
                 <!--<a href="https://docs.google.com/forms/d/e/1FAIpQLSfcMHjI5RqdXdzkmhTNYHWRhNsUUfaK0AaWBd9O_Wxtl5-LaQ/viewform"
@@ -347,7 +348,7 @@
             </div>
 
             <div class="formulario">
-                <form action="https://formspree.io/f/xbdzpzwa" method="post">
+                <form id="mi-formulario" action="https://formspree.io/f/xbdzpzwa" method="post">
                     <div class="campo">
                         <label class="pregunta" for="nombre">Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required />
@@ -403,11 +404,13 @@
                             Confitado
                         </label>
                         <label>
-                            <input type="radio" name="plato-principal" value="salmon"> Lomo de Salmón con Salsa de Puerros y
+                            <input type="radio" name="plato-principal" value="salmon"> Lomo de Salmón con Salsa de
+                            Puerros y
                             Zanahorias sobre Puré de Boniato
                         </label>
                         <label>
-                            <input type="radio" name="plato-principal" value="pulpitos"> Pulpitos encebollados con patatas y
+                            <input type="radio" name="plato-principal" value="pulpitos"> Pulpitos encebollados con
+                            patatas y
                             alioli
                         </label>
                     </div>
@@ -431,12 +434,17 @@
                     </div>
 
                     <div class="campo">
-                        <label class="pregunta" for="cancion">¿Qué canción no puede faltar para echarnos un baile?</label>
+                        <label class="pregunta" for="cancion">¿Qué canción no puede faltar para echarnos un
+                            baile?</label>
                         <input type="text" id="cancion" name="cancion" required />
                     </div>
 
                     <button class="btn-enviar" type="submit">Enviar</button>
                 </form>
+                <div id="mensaje-ok" style="display:none;">
+                    <p>El formulario se ha enviado correctamente. ¡Gracias!</p>
+                    <a href="#">Volver a rellenar el formulario</a>
+                </div>
             </div>
         </section>
     </div>
@@ -508,6 +516,29 @@
 
         // Ajustar volumen de música
         backgroundMusic.volume = 0.3;
+    </script>
+
+    <script>
+        const formulario = document.getElementById('mi-formulario');
+
+        formulario.addEventListener('submit', async function (e) {
+            e.preventDefault(); // evita la redirección
+
+            const datos = new FormData(formulario);
+
+            const respuesta = await fetch(formulario.action, {
+                method: 'POST',
+                body: datos,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (respuesta.ok) {
+                formulario.style.display = 'none';       // oculta el formulario
+                document.getElementById('mensaje-ok').style.display = 'block'; // muestra tu mensaje
+            } else {
+                alert('Hubo un error al enviar. Inténtalo de nuevo.');
+            }
+        });
     </script>
 
 </body>

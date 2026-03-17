@@ -265,7 +265,7 @@ section {
 
 .couple-tag {
     font-family: 'Prueba3';
-    font-size: 3.7em;
+    font-size: 3.1em;
     color: rgb(90, 0, 0);
     margin-bottom: 10px;
     letter-spacing: 3px;
@@ -518,10 +518,6 @@ section {
 /* ========================================
            GALERÍA DE FOTOS
         ======================================== */
-.gallery {
-    background: #f8f5f0;
-    padding: 80px 20px;
-}
 
 .gallery h2,
 .gallery1 h2,
@@ -723,6 +719,28 @@ section {
     transform: translateY(-3px);
 }
 
+#mensaje-ok {
+    margin-top: 30px;
+    color:rgb(90, 0, 0);
+    background-color: antiquewhite;
+    padding: 25px 10px;
+    border-radius: 8px;
+}
+
+#mensaje-ok p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#mensaje-ok a {
+    font-size: 20px;
+    color: antiquewhite;
+    border-radius: 8px;
+    padding: 10px 10px;
+    text-decoration: none;
+    background-color:rgb(90, 0, 0);
+}
+
 
 /* ========================================
            CONTADOR REGRESIVO
@@ -731,7 +749,6 @@ section {
     background: linear-gradient(135deg, #f8f5f0, #fff);
     padding: 60px 20px;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .countdown h3 {
