@@ -440,7 +440,7 @@ section {
            ITINERARIO
         ======================================== */
 .itinerary {
-    background: white;
+    background: rgb(51, 0, 0);
     padding: 80px 20px;
 }
 
@@ -473,17 +473,17 @@ section {
     text-align: right;
     padding-right: 30px;
     font-size: 1.4em;
-    color: rgb(90, 0, 0);
+    color: white;
     font-weight: bold;
 }
 
 .timeline-dot {
     width: 20px;
     height: 20px;
-    background: rgb(193, 146, 146);
-    border: 3px solid white;
+    background: rgb(127, 61, 61);
+    
     border-radius: 50%;
-    box-shadow: 0 0 0 3px rgb(90, 0, 0);
+    box-shadow: 0 0 0 3px white;
     position: relative;
     z-index: 2;
 }
@@ -497,13 +497,13 @@ section {
 .timeline-title {
     font-family: 'Clicker';
     font-size: 2em;
-    color: #333;
+    color: white;
     margin-bottom: 5px;
 }
 
 .timeline-icon {
     font-size: 1.8em;
-    color: rgb(90, 0, 0);
+    color: rgb(126, 72, 72);
     margin-bottom: 6px;
     display: block;
     opacity: 0.85;
@@ -680,31 +680,49 @@ section {
     transform: translateY(-3px);
 }
 
-/* ========================================
-           REGALO / CUENTA BANCARIA
-        ======================================== */
-.gift {
-    background: white;
-    padding: 40px 20px;
+/* ------- FORMULARIO ------- */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
 }
 
-.gift-icon {
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4AF37"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>') center/contain no-repeat;
+.campo input[type="text"] {
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px 10px;
 }
 
-.account-number {
-    background: #f8f5f0;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 1.3em;
-    letter-spacing: 2px;
-    margin: 20px auto;
-    max-width: 500px;
-    border: 2px dashed rgb(90, 0, 0);
+.campo label {
+    margin-bottom: 15px;
+    font-size: 17px;
 }
+
+.pregunta {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.btn-enviar {
+    background: #D4AF37;
+    color: rgb(90, 0, 0);
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid #D4AF37;
+}
+
+.btn-enviar:hover {
+    background: transparent;
+    color: #D4AF37;
+    transform: translateY(-3px);
+}
+
 
 /* ========================================
            CONTADOR REGRESIVO

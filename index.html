@@ -16,34 +16,13 @@
 
 <body>
 
-    <!-- ==========================================
-        AUDIO
-    =========================================== -->
+    <!-- ¡Peligroso! Muy probablemente seas el único que vea esto, no esperábamos menos de ti jajaja
+    Si estás aquí es porque quieres comprobar si lo hemos hecho nosotras, pues aquí está la prueba,
+    aunque con alguna pequeña ayudita, nos lo hemos currado nosotras, puedes estar orgulloso jajaja -->
 
-    <!--<audio id="bg-music" autoplay loop preload="auto">
-        <source src="img/thousand-years.mp3" type="audio/mpeg">
-    </audio>
+    <!-- PANTALLA DE PORTADA -->
 
-    <button onclick="toggleMusic()" id="music-btn">🔇 Activar música</button>
-
-    <script>
-        const audio = document.getElementById('bg-music');
-        const btn = document.getElementById('music-btn');
-
-        function toggleMusic() {
-            if (audio.muted) {
-                audio.muted = false;
-                btn.textContent = '🔊 Silenciar música';
-            } else {
-                audio.muted = true;
-                btn.textContent = '🔇 Activar música';
-            }
-        }
-    </script>-->
-    <!-- ==========================================
-         PANTALLA DE PORTADA
-    =========================================== -->
-
+    <!-- Música de fondo -->
     <audio id="backgroundMusic" loop>
         <source src="/InvitacionBoda-Andrea-Cristina/img/thousand-years.mp3" type="audio/mpeg">
     </audio>
@@ -60,23 +39,12 @@
         </div>
     </div>
 
-    <!-- ==========================================
-         CONTENIDO PRINCIPAL
-    =========================================== -->
+    <!-- CONTENIDO PRINCIPAL -->
     <div class="main-content" id="mainContent">
 
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-bg"></div>
-            <!--<video playsinline src="/InvitacionBoda-Andrea-Cristina/img/img-video-blend.mp4" muted=""
-                class="inset-0-olbrowsers absolute inset-0 h-full w-full object-cover mix-blend-screen contrast-200"></video>-->
-
-
-            <!-- Si quieres video en lugar de imagen, descomenta esto:
-            <video class="hero-video" autoplay loop muted playsinline>
-                <source src="TU_VIDEO_AQUI.mp4" type="video/mp4">
-            </video>
-            -->
         </section>
 
         <!-- Anuncio -->
@@ -87,19 +55,41 @@
             <div class="date">— 19·09·2026 —</div>
         </section>
 
+        <!-- Contador regresivo -->
+        <section class="countdown">
+            <h3>Faltan...</h3>
+            <div class="countdown-timer" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Galería -->
         <section class="gallery1">
-            <h2>El inicio de nuestro amor</h2>
+            <h2>Así empezó nuestra historia…</h2>
             <div class="gallery-grid">
                 <div class="gallery-item"></div>
                 <div class="gallery-item"></div>
             </div>
         </section>
-        <!-- Frase -->
+
+        <!-- Frase bonita -->
         <section class="quote-section">
-            <!--<div class="floral-divider">❀</div>-->
             <p>El amor es lo único que se multiplica cuando se comparte</p>
-            <!--<div class="floral-divider">❀</div>-->
         </section>
 
         <!-- Ceremonia -->
@@ -142,9 +132,9 @@
             </div>
         </section>
 
-        <!-- Galería -->
+        <!-- Galería 2 -->
         <section class="gallery2">
-            <h2>Los años seguían pasando…</h2>
+            <h2>Crecimos juntas…</h2>
             <div class="gallery-grid">
                 <div class="gallery2-item"></div>
                 <div class="gallery2-item"></div>
@@ -162,18 +152,9 @@
             <p></p>
         </section>
 
-        <!-- Galería -->
-        <section class="gallery3">
-            <h2>…pero no nos cansábamos…</h2>
-            <div class="gallery-grid">
-                <div class="gallery3-item"></div>
-                <div class="gallery3-item"></div>
-            </div>
-        </section>
-
         <!-- Itinerario -->
         <section class="itinerary">
-            <h2 style="font-size: 2.5em; color: rgb(90,0,0); margin-bottom: 50px;">Itinerario</h2>
+            <h2 style="font-size: 2.5em; color: white; margin-bottom: 50px;">Itinerario</h2>
 
             <div class="timeline-item">
                 <div class="timeline-time">10:00</div>
@@ -294,15 +275,15 @@
             </div>-->
         </section>
 
-        <!-- Galería -->
-        <section class="gallery4">
-            <h2>…y por fin…<br>¡NOS CASAMOS!</h2>
+        <!-- Galería 3 -->
+        <section class="gallery3">
+            <h2>Siguieron pasando los años…</h2>
             <div class="gallery-grid">
-                <div class="gallery4-item"></div>
-                <div class="gallery4-item"></div>
-                <div class="gallery4-item"></div>
+                <div class="gallery3-item"></div>
+                <div class="gallery3-item"></div>
             </div>
         </section>
+
 
         <!-- Álbum de Fotos QR -->
         <section style="background: linear-gradient(135deg, #f8f5f0, #fff); padding: 80px 20px;">
@@ -314,7 +295,6 @@
                     ¡Nos hará muchísima ilusión verlas!
                 </p>
 
-                <!-- 🔄 LÍNEA 784: CAMBIA ESTA URL POR TU ENLACE DE GOOGLE PHOTOS O ÁLBUM -->
                 <a href="https://photos.app.goo.gl/TU_ENLACE_AQUI" target="_blank" style="text-decoration: none;">
                     <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 30px auto; max-width: 400px; transition: transform 0.3s ease;"
                         onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
@@ -339,68 +319,130 @@
             </div>
         </section>
 
-        <!-- Regalo -->
-        <section class="gift">
-            <h2 style="font-size: 2.5em; color: rgb(90,0,0);">Regalo</h2>
-            <div class="gift-icon"></div>
-            <p style="max-width: 600px; margin: 20px auto; font-size: 1.2em; color: #666;">
-                Nuestro mejor regalo es que estéis con nosotras en nuestro día,
-                pero si queréis hacernos un obsequio, ¡aquí está nuestro número de cuenta!
-            </p>
-            <div class="account-number">
-                ES28 0073 0100 5802 0823 7516
+        <!-- Galería 4 -->
+        <section class="gallery4">
+            <h2>…y por fin…<br>¡NOS CASAMOS!</h2>
+            <div class="gallery-grid">
+                <div class="gallery4-item"></div>
+                <div class="gallery4-item"></div>
+                <div class="gallery4-item"></div>
             </div>
-            <p style="margin-top: 10px; color: #999;">Andrea de Gregorio</p>
-            <p style="margin-top: 10px; color: #999;">Cristina Fernández</p>
         </section>
 
         <!-- Confirmación -->
         <section class="rsvp">
-            <h2>¿Nos acompañas?</h2>
-            <p class="rsvp-message">
-                El gran día está cerca y ya está todo preparado...<br>
-                Pero falta lo más importante: ¡que vengas tú!
-            </p>
-            <div class="rsvp-envelope" onclick="confirmAssistance()"></div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcMHjI5RqdXdzkmhTNYHWRhNsUUfaK0AaWBd9O_Wxtl5-LaQ/viewform"
+            <div class="nos-acompañas">
+                <h2>¿Nos acompañas?</h2>
+                <p class="rsvp-message">
+                    El gran día está cerca y ya está todo preparado...<br>
+                    Pero falta lo más importante: ¡que vengas tú!
+                </p>
+                <div class="rsvp-envelope"></div>
+
+                <!--Opción Google Forms -->
+                <!--<a href="https://docs.google.com/forms/d/e/1FAIpQLSfcMHjI5RqdXdzkmhTNYHWRhNsUUfaK0AaWBd9O_Wxtl5-LaQ/viewform"
                 class="rsvp-button" onclick="confirmAssistance(); return false;">
                 Confirmar Asistencia
-            </a>
-        </section>
+                </a>-->
+            </div>
 
-        <!-- Contador regresivo -->
-        <section class="countdown">
-            <h3>Nos vemos en...</h3>
-            <div class="countdown-timer" id="countdown">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">0</div>
-                    <div class="countdown-label">Días</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">0</div>
-                    <div class="countdown-label">Horas</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">0</div>
-                    <div class="countdown-label">Minutos</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">0</div>
-                    <div class="countdown-label">Segundos</div>
-                </div>
+            <div class="formulario">
+                <form action="https://formspree.io/f/xbdzpzwa" method="post">
+                    <div class="campo">
+                        <label class="pregunta" for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required />
+                    </div>
+
+                    <div class="campo">
+                        <label class="pregunta" for="asistencia">Asistencia:</label>
+                        <label>
+                            <input type="radio" name="asistencia" value="si"> ¡Sí, no me lo pierdo por nada del munto!
+                        </label>
+                        <label>
+                            <input type="radio" name="asistencia" value="no"> Sintiéndolo mucho, no voy a poder asistir.
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label class="pregunta" for="alergia">¿Tienes alguna alergia o intolerancia?</label>
+                        <label>
+                            <input type="radio" name="alergia" value="si"> Sí, tengo alergias/intolerancias.
+                        </label>
+                        <label>
+                            <input type="radio" name="alergia" value="no"> No, no tengo ninguna.
+                        </label>
+                        <input type="text" id="alergia-detalle" name="alergia-detalle"
+                            placeholder="Especifica a qué alimentos" />
+                    </div>
+
+                    <div class="campo">
+                        <label class="pregunta" for="plato-principal">Elige tu plato principal:</label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="carrillera"> Carrillera de ternera a la
+                            antigua
+                            rustida durante 16 hora​s
+                        </label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="codillo"> Codillo de Baviera con Chucrut y
+                            mostaza
+                            dulce​
+                        </label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="costillar"> Costillar a baja temperatura
+                            glaseadas
+                            al estilo de Marlito
+                        </label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="entrecot"> Entrecot Matilde (Roquefort,
+                            cebolla
+                            caramelizada y setas)​​
+                        </label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="bacalao"> Bacalao Gratinado sobre Pisto y
+                            Tomate
+                            Confitado
+                        </label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="salmon"> Lomo de Salmón con Salsa de Puerros y
+                            Zanahorias sobre Puré de Boniato
+                        </label>
+                        <label>
+                            <input type="radio" name="plato-principal" value="pulpitos"> Pulpitos encebollados con patatas y
+                            alioli
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label class="pregunta" for="postre">Elige tu postre:</label>
+                        <label>
+                            <input type="radio" name="postre" value="tarta-queso"> Tarta de queso cremosa y confitura de
+                            frutos
+                            rojos hecha en casa
+                        </label>
+                        <label>
+                            <input type="radio" name="postre" value="lemon-cake"> Lemon Cake
+                        </label>
+                        <label>
+                            <input type="radio" name="postre" value="brownie"> Brownie de chocolate
+                        </label>
+                        <label>
+                            <input type="radio" name="postre" value="tiramisu"> El tiramisú de Matilde
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label class="pregunta" for="cancion">¿Qué canción no puede faltar para echarnos un baile?</label>
+                        <input type="text" id="cancion" name="cancion" required />
+                    </div>
+
+                    <button class="btn-enviar" type="submit">Enviar</button>
+                </form>
             </div>
         </section>
     </div>
 
-    <!-- Control de Música -->
-    <!--<div class="music-control" id="musicControl">
-        <span id="musicIcon">🔊</span>
-    </div>-->
-
     <script>
-        // ==========================================
         // ABRIR INVITACIÓN
-        // ==========================================
         function openInvitation() {
             const coverScreen = document.getElementById('coverScreen');
             const mainContent = document.getElementById('mainContent');
