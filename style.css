@@ -216,8 +216,7 @@ section {
     /* 🔄 LÍNEA 178: CAMBIA ESTA URL POR TU IMAGEN/VIDEO HERO */
     background:
         url('/InvitacionBoda-Andrea-Cristina/img/caras-anillo.jpeg') center/cover no-repeat;
-    animation: heroIntro 5s ease-out forwards,
-        zoomBg 20s ease-in-out infinite;
+    animation: heroIntro 5s ease-out forwards;
     opacity: 0;
 }
 
