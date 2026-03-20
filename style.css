@@ -585,7 +585,7 @@ section {
 
 /* 🔄 LÍNEAS 442-444: CAMBIA ESTAS URLs POR TUS FOTOS DE PAREJA */
 .gallery-item:nth-child(1) {
-    background: url('/InvitacionBoda-Andrea-Cristina/img/403.jpg') center/cover;
+    background: url('/InvitacionBoda-Andrea-Cristina/img/IMG_0110\ \(2\).JPG') center/cover;
 }
 
 .gallery-item:nth-child(2) {
@@ -593,7 +593,7 @@ section {
 }
 
 .gallery-item:nth-child(3) {
-    background: url('/InvitacionBoda-Andrea-Cristina/img/IMG_0110\ \(2\).JPG') center/cover;
+    background: url('/InvitacionBoda-Andrea-Cristina/img/IMG_2911.JPG') center/cover;
 }
 
 /*GALLERY 2*/
@@ -702,6 +702,10 @@ section {
 
 /* ------- FORMULARIO ------- */
 
+.formulario {
+    min-height: 200px;
+}
+
 .campo {
     display: flex;
     flex-direction: column;
@@ -744,7 +748,7 @@ section {
 }
 
 #mensaje-ok {
-    margin-top: 30px;
+    margin-top: 100px;
     color:rgb(90, 0, 0);
     background-color: antiquewhite;
     padding: 25px 10px;

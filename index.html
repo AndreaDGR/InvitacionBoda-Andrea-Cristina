@@ -161,7 +161,7 @@
                 <div class="timeline-time">10:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/location.svg" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/location.svg" class="timeline-icon" />
                     <div class="timeline-title">Bienvenida</div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                 <div class="timeline-time">11:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-ceremonia.png" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-ceremonia.png" class="timeline-icon" />
                     <div class="timeline-title">Ceremonia</div>
                 </div>
             </div>
@@ -179,7 +179,7 @@
                 <div class="timeline-time">12:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-cocktail.png" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-cocktail.png" class="timeline-icon" />
                     <div class="timeline-title">Cocktail</div>
                 </div>
             </div>
@@ -188,7 +188,7 @@
                 <div class="timeline-time">14:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-comida.png" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-comida.png" class="timeline-icon" />
                     <div class="timeline-title">Comida</div>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                 <div class="timeline-time">17:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-picoteo.png" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-picoteo.png" class="timeline-icon" />
                     <div class="timeline-title">Picoteo</div>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                 <div class="timeline-time">21:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-cena.png" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-cena.png" class="timeline-icon" />
                     <div class="timeline-title">Cena</div>
                 </div>
             </div>
@@ -215,7 +215,7 @@
                 <div class="timeline-time">22:00</div>
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-baile.png" class="timeline-icon"/>
+                    <img src="/InvitacionBoda-Andrea-Cristina/img/icono-baile.png" class="timeline-icon" />
                     <div class="timeline-title">Baile</div>
                 </div>
             </div>
@@ -242,13 +242,13 @@
                     ¡Nos hará muchísima ilusión verlas!
                 </p>
 
-                <a href="https://www.wedshoots.com/uk?albumId=UKaff9cebb" target="_blank" style="text-decoration: none;">
+                <a href="https://www.wedshoots.com/uk?albumId=UKaff9cebb" target="_blank"
+                    style="text-decoration: none;">
                     <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 30px auto; max-width: 400px; transition: transform 0.3s ease;"
                         onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
 
                         <!-- 🔄 LÍNEA 788: CAMBIA ESTA URL POR LA IMAGEN DE TU CÓDIGO QR -->
-                        <img src="/InvitacionBoda-Andrea-Cristina/img/qr-wedshoots.jpeg"
-                            alt="Código QR Álbum de Fotos"
+                        <img src="/InvitacionBoda-Andrea-Cristina/img/qr-wedshoots.jpeg" alt="Código QR Álbum de Fotos"
                             style="width: 100%; max-width: 300px; border-radius: 10px;">
 
                         <p style="margin-top: 20px; color: rgb(90,0,0); font-size: 1.1em; font-weight: bold;">
@@ -283,7 +283,8 @@
                     Pero falta lo más importante: ¡que vengas tú!
                 </p>
                 <div class="rsvp-envelope"></div>
-                <p class="rsvp-message">Importante:<br>Hay que rellenar un formulario por cada asistente.<br>No hace falta rellenarlo ya, pero agradeceríamos que sea lo antes posible :)</p>
+                <p class="rsvp-message">Importante:<br>Hay que rellenar un formulario por cada asistente.<br>No hace
+                    falta rellenarlo ya, pero agradeceríamos que sea lo antes posible :)</p>
 
                 <!--Opción Google Forms -->
                 <!--<a href="https://docs.google.com/forms/d/e/1FAIpQLSfcMHjI5RqdXdzkmhTNYHWRhNsUUfaK0AaWBd9O_Wxtl5-LaQ/viewform"
@@ -292,7 +293,7 @@
                 </a>-->
             </div>
 
-            <div class="formulario">
+            <div class="formulario" id="formulario">
                 <form id="mi-formulario" action="https://formspree.io/f/xbdzpzwa" method="post">
                     <div class="campo">
                         <label class="pregunta" for="nombre">Nombre completo:</label>
@@ -388,7 +389,7 @@
                 </form>
                 <div id="mensaje-ok" style="display:none;">
                     <p>El formulario se ha enviado correctamente. ¡Gracias!</p>
-                    <a href="#">Volver a rellenar el formulario</a>
+                    <a href="#formulario" onclick="volverFormulario()">Volver a rellenar el formulario</a>
                 </div>
             </div>
         </section>
@@ -464,7 +465,7 @@
             document.getElementById('seconds').textContent = seconds;
 
             if (distance < 0) {
-                document.querySelector('.countdown').innerHTML = '<h2>¡Hoy es el gran día! 💒</h2>';
+                document.querySelector('.countdown').innerHTML = '<h2>¡Hoy es el gran día!</h2>';
             }
         }
 
@@ -494,9 +495,18 @@
                 formulario.style.display = 'none';       // oculta el formulario
                 document.getElementById('mensaje-ok').style.display = 'block'; // muestra tu mensaje
             } else {
-                alert('Hubo un error al enviar. Inténtalo de nuevo.');
+                alert('Se ha producido un error. Inténtalo de nuevo.');
             }
         });
+
+        function volverFormulario() {
+            // Resetea todos los campos
+            document.getElementById('mi-formulario').reset();
+
+            // Muestra el formulario y oculta el mensaje
+            document.getElementById('mi-formulario').style.display = 'block';
+            document.getElementById('mensaje-ok').style.display = 'none';
+        }
     </script>
 
 </body>
