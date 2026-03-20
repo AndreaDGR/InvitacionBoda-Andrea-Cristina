@@ -303,7 +303,7 @@
                     <div class="campo">
                         <label class="pregunta" for="asistencia">Asistencia:</label>
                         <label>
-                            <input type="radio" name="asistencia" value="si"> ¡Sí, no me lo pierdo por nada del munto!
+                            <input type="radio" name="asistencia" value="si" required> ¡Sí, no me lo pierdo por nada del munto!
                         </label>
                         <label>
                             <input type="radio" name="asistencia" value="no"> Sintiéndolo mucho, no voy a poder asistir.
@@ -313,7 +313,7 @@
                     <div class="campo">
                         <label class="pregunta" for="alergia">¿Tienes alguna alergia o intolerancia?</label>
                         <label>
-                            <input type="radio" name="alergia" value="si"> Sí, tengo alergias/intolerancias.
+                            <input type="radio" name="alergia" value="si" required> Sí, tengo alergias/intolerancias.
                         </label>
                         <label>
                             <input type="radio" name="alergia" value="no"> No, no tengo ninguna.
@@ -325,7 +325,7 @@
                     <div class="campo">
                         <label class="pregunta" for="plato-principal">Elige tu plato principal:</label>
                         <label>
-                            <input type="radio" name="plato-principal" value="carrillera"> Carrillera de ternera a la
+                            <input type="radio" name="plato-principal" value="carrillera" required> Carrillera de ternera a la
                             antigua
                             rustida durante 16 hora​s
                         </label>
@@ -364,7 +364,7 @@
                     <div class="campo">
                         <label class="pregunta" for="postre">Elige tu postre:</label>
                         <label>
-                            <input type="radio" name="postre" value="tarta-queso"> Tarta de queso cremosa y confitura de
+                            <input type="radio" name="postre" value="tarta-queso" required> Tarta de queso cremosa y confitura de
                             frutos
                             rojos hecha en casa
                         </label>
@@ -492,8 +492,10 @@
             });
 
             if (respuesta.ok) {
-                formulario.style.display = 'none';       // oculta el formulario
-                document.getElementById('mensaje-ok').style.display = 'block'; // muestra tu mensaje
+                formulario.style.display = 'none';
+                const mensaje = document.getElementById('mensaje-ok');
+                mensaje.style.display = 'block';
+                mensaje.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
                 alert('Se ha producido un error. Inténtalo de nuevo.');
             }
